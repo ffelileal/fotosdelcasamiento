@@ -13,10 +13,10 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-rose-100">
         <div class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-center space-x-8">
-                <a href="index.html" class="nav-btn nav-active px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
+           <div class="flex justify-center space-x-8">
+                <a href="index.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
                 <a href="baile.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
-                <a href="civil.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
+                <a href="civil.html" class="nav-btn nav-active px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
                 <a href="sillon.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
                 <a href="espejo.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="espejo">Espejo</a>
                 <a href="invitados.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
@@ -77,6 +77,50 @@
             </div>
         </section>
 
+        <!-- Baile Section -->
+        <section id="baile" class="section section-hidden fade-in">
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">💃 Baile 🕺</h2>
+                    <p class="text-xl text-gray-600">Momentos de alegría y celebración</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🎵', 'Primera Danza', 'from-yellow-200 to-orange-200', 'baile-primera-danza')">
+                        <div class="aspect-square bg-gradient-to-br from-yellow-200 to-orange-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎵</div>
+                                <p class="font-serif text-gray-700">Primera Danza</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🎉', 'Fiesta', 'from-pink-200 to-rose-200', 'baile-fiesta')">
+                        <div class="aspect-square bg-gradient-to-br from-pink-200 to-rose-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎉</div>
+                                <p class="font-serif text-gray-700">Fiesta</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🕺', 'Baile Libre', 'from-purple-200 to-indigo-200', 'baile-libre')">
+                        <div class="aspect-square bg-gradient-to-br from-purple-200 to-indigo-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🕺</div>
+                                <p class="font-serif text-gray-700">Baile Libre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🎶', 'Música en Vivo', 'from-green-200 to-teal-200', 'musica-vivo')">
+                        <div class="aspect-square bg-gradient-to-br from-green-200 to-teal-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎶</div>
+                                <p class="font-serif text-gray-700">Música en Vivo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Civil Section -->
         <section id="civil" class="section section-hidden fade-in">
@@ -221,7 +265,56 @@
         </section>
 
         <!-- Fotos de Invitados Section -->
-       
+        <section id="invitados" class="section section-hidden fade-in">
+            <div class="max-w-6xl mx-auto px-4 py-12">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">📸 Fotos de Invitados</h2>
+                    <p class="text-xl text-gray-600">Momentos capturados por nuestros queridos invitados</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg">
+                        <div class="aspect-square bg-gradient-to-br from-emerald-200 to-green-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">📱</div>
+                                <p class="font-serif text-gray-700">Selfies Divertidas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg">
+                        <div class="aspect-square bg-gradient-to-br from-violet-200 to-purple-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🤳</div>
+                                <p class="font-serif text-gray-700">Momentos Espontáneos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg">
+                        <div class="aspect-square bg-gradient-to-br from-amber-200 to-yellow-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">👥</div>
+                                <p class="font-serif text-gray-700">Grupos de Amigos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg">
+                        <div class="aspect-square bg-gradient-to-br from-sky-200 to-blue-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎊</div>
+                                <p class="font-serif text-gray-700">Celebración</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button for Guest Photos -->
+                <div class="text-center mt-12">
+                    <a href="#" target="_blank" class="inline-block gold-accent text-white font-semibold px-8 py-4 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <span class="heart-decoration">Ver todas las fotos de invitados</span>
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
