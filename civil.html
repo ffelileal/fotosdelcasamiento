@@ -12,32 +12,30 @@
 <body class="romantic-bg min-h-screen font-sans">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-rose-100">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <<div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-center">
         <!-- Botón hamburguesa -->
-        <button id="menuBtn" class="md:hidden flex items-center px-3 py-2 border rounded text-rose-400 border-rose-200 focus:outline-none">
+        <button id="menuBtn" class="md:hidden flex items-center px-3 py-2 border rounded text-[#d4af37] border-[#d4af37] focus:outline-none ml-4">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
         </button>
         <!-- Menú de navegación -->
-        <div class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-center space-x-8">
-                <a href="index.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
-                <a href="baile.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
-                <a href="civil.html" class="nav-btn nav-active px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
-                <a href="sillon.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
-                <a href="espejo.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="espejo">Espejo</a>
-                <a href="invitados.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
-            </div>
+        <div id="navLinks" class="hidden md:flex justify-center space-x-8">
+            <a href="index.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
+            <a href="baile.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
+            <a href="civil.html" class="nav-btn nav-active px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
+            <a href="sillon.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
+            <a href="selfiecam.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="selfiecam">SelfieCam</a>
+            <a href="invitados.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
         </div>
     </div>
     <!-- Menú móvil desplegable -->
     <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-rose-100 px-4 pb-4">
         <a href="index.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
         <a href="baile.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
-        <a href="civil.html" class="block nav-btn nav-active px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
+        <a href="civil.html"class="block nav-btn nav-active px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
         <a href="sillon.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
-        <a href="espejo.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="espejo">Espejo</a>
+        <a href="selfiecam" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="espejo">espejo</a>
         <a href="invitados.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
     </div>
 </nav>
@@ -85,63 +83,8 @@
                         </svg>
                     </button>
                 </div>
-
-                <!-- CTA Button -->
-                <div class="text-center">
-                    <a href="https://photos.app.goo.gl/nhSAngtwLsxS6VMs7" target="_blank" class="inline-block gold-accent text-white font-semibold px-8 py-4 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                        <span class="heart-decoration">Fotografías con los novios</span>
-                    </a>
-                </div>
             </div>
-        </section>
 
-        <!-- Baile Section -->
-        <section id="baile" class="section section-hidden fade-in">
-            <div class="max-w-6xl mx-auto px-4 py-12">
-                <div class="text-center mb-12">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">💃 Baile 🕺</h2>
-                    <p class="text-xl text-gray-600">Momentos de alegría y celebración</p>
-                </div>
-                
-                <div class="gallery-grid">
-                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🎵', 'Primera Danza', 'from-yellow-200 to-orange-200', 'baile-primera-danza')">
-                        <div class="aspect-square bg-gradient-to-br from-yellow-200 to-orange-200 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-4xl mb-2">🎵</div>
-                                <p class="font-serif text-gray-700">Primera Danza</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🎉', 'Fiesta', 'from-pink-200 to-rose-200', 'baile-fiesta')">
-                        <div class="aspect-square bg-gradient-to-br from-pink-200 to-rose-200 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-4xl mb-2">🎉</div>
-                                <p class="font-serif text-gray-700">Fiesta</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🕺', 'Baile Libre', 'from-purple-200 to-indigo-200', 'baile-libre')">
-                        <div class="aspect-square bg-gradient-to-br from-purple-200 to-indigo-200 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-4xl mb-2">🕺</div>
-                                <p class="font-serif text-gray-700">Baile Libre</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer" onclick="openPhoto('🎶', 'Música en Vivo', 'from-green-200 to-teal-200', 'musica-vivo')">
-                        <div class="aspect-square bg-gradient-to-br from-green-200 to-teal-200 flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-4xl mb-2">🎶</div>
-                                <p class="font-serif text-gray-700">Música en Vivo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Civil Section -->
-        <section id="civil" class="section section-hidden fade-in">
             <div class="max-w-6xl mx-auto px-4 py-12">
                 <div class="text-center mb-12">
                     <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">⚖️ Civil</h2>
@@ -230,11 +173,11 @@
             </div>
         </section>
 
-        <!-- Espejo Section -->
+        <!-- espejo Section -->
         <section id="espejo" class="section section-hidden fade-in">
             <div class="max-w-6xl mx-auto px-4 py-12">
                 <div class="text-center mb-12">
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">🪞 Espejo</h2>
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-800 mb-4">🪞 espejo</h2>
                     <p class="text-xl text-gray-600">Fotos divertidas y creativas</p>
                 </div>
                 
@@ -273,7 +216,7 @@
                     </div>
                 </div>
                 
-                <!-- CTA Button for Espejo Photos -->
+                <!-- CTA Button for espejo Photos -->
                 <div class="text-center mt-12">
                     <a href="#" target="_blank" class="inline-block gold-accent text-white font-semibold px-8 py-4 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
                         <span class="heart-decoration">Ver todas las fotos del espejo</span>
@@ -375,211 +318,6 @@
         </div>
     </div>
 
-    <script>
-        let currentSlide = 0;
-        const totalSlides = 3;
-        let currentPhotoData = null;
-
-        function showSection(sectionName) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.add('section-hidden');
-                section.classList.remove('fade-in');
-            });
-
-            // Show selected section
-            const targetSection = document.getElementById(sectionName);
-            targetSection.classList.remove('section-hidden');
-            setTimeout(() => {
-                targetSection.classList.add('fade-in');
-            }, 50);
-
-            // Update navigation
-            const navButtons = document.querySelectorAll('.nav-btn');
-            navButtons.forEach(btn => {
-                btn.classList.remove('nav-active');
-            });
-            
-            const activeBtn = document.querySelector(`[data-section="${sectionName}"]`);
-            activeBtn.classList.add('nav-active');
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        function updateCarousel() {
-            const track = document.getElementById('carouselTrack');
-            const translateX = -currentSlide * 100;
-            track.style.transform = `translateX(${translateX}%)`;
-        }
-
-        // Auto-advance carousel
-        setInterval(nextSlide, 4000);
-
-        // Add position relative to carousel container
-        document.addEventListener('DOMContentLoaded', function() {
-            const carouselContainer = document.querySelector('.carousel-container');
-            carouselContainer.style.position = 'relative';
-        });
-
-        // Modal functions
-        function openPhoto(emoji, title, gradient, filename) {
-            currentPhotoData = { emoji, title, gradient, filename };
-            const modal = document.getElementById('photoModal');
-            const modalContent = document.getElementById('modalContent');
-            
-            modalContent.innerHTML = `
-                <div class="aspect-square bg-gradient-to-br ${gradient} flex items-center justify-center" style="width: 500px; height: 500px;">
-                    <div class="text-center">
-                        <div class="text-8xl mb-4">${emoji}</div>
-                        <p class="text-2xl font-serif text-gray-700">${title}</p>
-                        <p class="text-sm text-gray-500 mt-2">Casamiento Ale & Andre</p>
-                    </div>
-                </div>
-            `;
-            
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('photoModal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-            currentPhotoData = null;
-        }
-
-        function downloadPhoto() {
-            if (!currentPhotoData) return;
-            
-            // Crear un canvas para generar la imagen
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            canvas.width = 1000;
-            canvas.height = 1000;
-            
-            // Crear gradiente diagonal
-            const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-            const colors = getGradientColors(currentPhotoData.gradient);
-            gradient.addColorStop(0, colors.from);
-            gradient.addColorStop(1, colors.to);
-            
-            // Dibujar fondo con gradiente
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // Agregar bordes redondeados simulados con sombra
-            ctx.shadowColor = 'rgba(0, 0, 0, 0.2)';
-            ctx.shadowBlur = 20;
-            ctx.shadowOffsetX = 0;
-            ctx.shadowOffsetY = 10;
-            
-            // Dibujar emoji grande
-            ctx.font = 'bold 280px Arial, sans-serif';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillStyle = '#1f2937';
-            ctx.shadowColor = 'rgba(0, 0, 0, 0.1)';
-            ctx.shadowBlur = 5;
-            ctx.fillText(currentPhotoData.emoji, canvas.width/2, canvas.height/2 - 80);
-            
-            // Reset shadow para texto
-            ctx.shadowColor = 'transparent';
-            ctx.shadowBlur = 0;
-            
-            // Dibujar título principal
-            ctx.font = 'bold 48px "Playfair Display", serif';
-            ctx.fillStyle = '#374151';
-            ctx.fillText(currentPhotoData.title, canvas.width/2, canvas.height/2 + 120);
-            
-            // Dibujar línea decorativa
-            ctx.strokeStyle = '#d4af37';
-            ctx.lineWidth = 3;
-            ctx.beginPath();
-            ctx.moveTo(canvas.width/2 - 100, canvas.height/2 + 160);
-            ctx.lineTo(canvas.width/2 + 100, canvas.height/2 + 160);
-            ctx.stroke();
-            
-            // Dibujar subtítulo
-            ctx.font = '32px "Inter", sans-serif';
-            ctx.fillStyle = '#6b7280';
-            ctx.fillText('Casamiento Ale & Andre', canvas.width/2, canvas.height/2 + 200);
-            
-            // Dibujar fecha
-            ctx.font = '24px "Inter", sans-serif';
-            ctx.fillStyle = '#9ca3af';
-            ctx.fillText('6 de septiembre 2025', canvas.width/2, canvas.height/2 + 240);
-            
-            // Agregar corazón decorativo
-            ctx.font = '32px Arial';
-            ctx.fillStyle = '#d4af37';
-            ctx.fillText('♥', canvas.width/2, canvas.height/2 + 280);
-            
-            // Convertir canvas a blob y descargar
-            canvas.toBlob(function(blob) {
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.download = `casamiento-ale-andre-${currentPhotoData.filename}.png`;
-                link.href = url;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-            }, 'image/png', 1.0);
-        }
-
-        function getGradientColors(gradientClass) {
-            const colorMap = {
-                'from-yellow-200 to-orange-200': { from: '#fef3c7', to: '#fed7aa' },
-                'from-pink-200 to-rose-200': { from: '#fce7f3', to: '#fecdd3' },
-                'from-purple-200 to-indigo-200': { from: '#e9d5ff', to: '#c7d2fe' },
-                'from-green-200 to-teal-200': { from: '#dcfce7', to: '#ccfbf1' },
-                'from-gray-100 to-gray-200': { from: '#f3f4f6', to: '#e5e7eb' },
-                'from-blue-100 to-blue-200': { from: '#dbeafe', to: '#bfdbfe' },
-                'from-rose-100 to-pink-200': { from: '#ffe4e6', to: '#fce7f3' },
-                'from-yellow-100 to-amber-200': { from: '#fef3c7', to: '#fde68a' },
-                'from-amber-100 to-orange-200': { from: '#fef3c7', to: '#fed7aa' },
-                'from-purple-100 to-violet-200': { from: '#f3e8ff', to: '#ddd6fe' },
-                'from-teal-100 to-cyan-200': { from: '#ccfbf1', to: '#a5f3fc' },
-                'from-lime-200 to-green-200': { from: '#d9f99d', to: '#dcfce7' },
-                'from-cyan-200 to-blue-200': { from: '#a5f3fc', to: '#bfdbfe' },
-                'from-fuchsia-200 to-pink-200': { from: '#f5d0fe', to: '#fce7f3' },
-                'from-orange-200 to-red-200': { from: '#fed7aa', to: '#fecaca' },
-                'from-emerald-200 to-green-200': { from: '#a7f3d0', to: '#dcfce7' },
-                'from-violet-200 to-purple-200': { from: '#ddd6fe', to: '#e9d5ff' },
-                'from-amber-200 to-yellow-200': { from: '#fde68a', to: '#fef3c7' },
-                'from-sky-200 to-blue-200': { from: '#bae6fd', to: '#bfdbfe' }
-            };
-            return colorMap[gradientClass] || { from: '#f3f4f6', to: '#e5e7eb' };
-        }
-
-        // Cerrar modal con ESC
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('hidden');
-    });
-    // Opcional: cerrar menú al hacer click en un enlace
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    });
-});
-    </script>
+    <script src="script.js"></script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97c077ae838d0a76',t:'MTc1NzM1NTcwNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

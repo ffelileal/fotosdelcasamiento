@@ -12,25 +12,23 @@
 <body class="romantic-bg min-h-screen font-sans">
     <!-- Navigation -->
      <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-rose-100">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-center">
             <!-- Logo o título opcional -->
             <!-- Botón hamburguesa -->
-            <button id="menuBtn" class="md:hidden flex items-center px-3 py-2 border rounded text-rose-400 border-rose-200 focus:outline-none">
+            <button id="menuBtn" class="md:hidden flex items-center px-3 py-2 border rounded text-[#d4af37] border-[#d4af37] focus:outline-none ml-4">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
             <!-- Menú de navegación -->
-        <div class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-center space-x-8">
+             <div id="navLinks" class="hidden md:flex justify-center space-x-8">
                 <a href="index.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
                 <a href="baile.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
                 <a href="civil.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
                 <a href="sillon.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
-                <a href="espejo.html" class="nav-btn nav-active px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="espejo">Espejo</a>
+                <a href="selfiecam.html" class="nav-btn nav-active px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="selfiecam">SelfieCam</a>
                 <a href="invitados.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
             </div>
-        </div>
     </div>
     <!-- Menú móvil desplegable -->
     <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-rose-100 px-4 pb-4">
@@ -38,7 +36,7 @@
         <a href="baile.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
         <a href="civil.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
         <a href="sillon.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
-        <a href="espejo.html" class="block nav-btn nav-active px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="espejo">Espejo</a>
+        <a href="selfiecam.html" class="block nav-btn nav-active px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="selfiecam">SelfieCam</a>
         <a href="invitados.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
     </nav>
 
@@ -73,17 +71,17 @@
                         </div>
                         <div class="carousel-slide">
                             <div class="aspect-video bg-cover bg-center flex items-center justify-center" 
-                                style="background-image: url('/assets/fotos/Espejo/111969-strip.jpg');">
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="aspect-video bg-cover bg-center flex items-center justify-center" 
-                                style="background-image: url('/assets/fotos/Espejo/111876-strip.jpg');">
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <div class="aspect-video bg-cover bg-center flex items-center justify-center" 
                                 style="background-image: url('/assets/fotos/Espejo/111882-strip.jpg');">
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="aspect-video bg-cover bg-center flex items-center justify-center" 
+                                style="background-image: url('/assets/fotos/Espejo/111813-strip.jpg');">
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="aspect-video bg-cover bg-center flex items-center justify-center" 
+                                style="background-image: url('/assets/fotos/Espejo/111825-strip.jpg');">
                             </div>
                         </div>
                         <div class="carousel-slide">
@@ -107,7 +105,7 @@
                 </div>                
                 <div class="gallery-grid">
                     <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer"
-                        onclick="openPhotoImg('/assets/fotos/Espejo/111822-strip.jpg', 'SelfieCam')">
+                        onclick="openPhotoImg('/assets/fotos/Espejo/111822-strip.jpg', 'selfiecam')">
                         <div class="aspect-square bg-gradient-to-br from-fuchsia-200 to-pink-200 flex items-center justify-center">
                             <div class="w-full h-full flex items-center justify-center">
                                 <div class="aspect-video w-full h-full bg-cover bg-center rounded-xl shadow-lg"
@@ -117,7 +115,7 @@
                         </div>
                     </div>
                     <div class="photo-hover rounded-2xl overflow-hidden shadow-lg cursor-pointer"
-                        onclick="openPhotoImg('/assets/fotos/Espejo/111810-strip.jpg', 'SelfieCam')">
+                        onclick="openPhotoImg('/assets/fotos/Espejo/111810-strip.jpg', 'selfiecam')">
                         <div class="aspect-square bg-gradient-to-br from-fuchsia-200 to-pink-200 flex items-center justify-center">
                             <div class="w-full h-full flex items-center justify-center">
                                 <div class="aspect-video w-full h-full bg-cover bg-center rounded-xl shadow-lg"
@@ -128,10 +126,10 @@
                     </div>
                 </div>
                 
-                <!-- CTA Button for Espejo Photos -->
+                <!-- CTA Button for selfiecam Photos -->
                 <div class="text-center mt-12">
                     <a href="https://photos.app.goo.gl/Uoz1kLg63dUW9qLt8" target="_blank" class="inline-block gold-accent text-white font-semibold px-8 py-4 rounded-full text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                        <span class="heart-decoration">Ver todas las fotos del espejo</span>
+                        <span class="heart-decoration">Ver todas las fotos del SelfieCam</span>
                     </a>
                 </div>
             </div>
