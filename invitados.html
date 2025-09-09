@@ -12,23 +12,27 @@
 <body class="romantic-bg min-h-screen font-sans">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-rose-100">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-center">
-        <!-- Botón hamburguesa -->
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        
+        <!-- Menú de navegación centrado -->
+        <div class="flex-1 flex justify-center">
+            <div id="navLinks" class="hidden md:flex justify-center space-x-8">
+                <a href="index.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
+                <a href="baile.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
+                <a href="civil.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
+                <a href="sillon.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
+                <a href="selfiecam.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="selfiecam">SelfieCam</a>
+                <a href="invitados.html" class="nav-btn nav-active  px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
+            </div>
+    </div>
+            <!-- Botón hamburguesa a la derecha -->
         <button id="menuBtn" class="md:hidden flex items-center px-3 py-2 border rounded text-[#d4af37] border-[#d4af37] focus:outline-none ml-4">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
         </button>
-        <!-- Menú de navegación -->
-         <div id="navLinks" class="hidden md:flex justify-center space-x-8">
-                <a href="index.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
-                <a href="baile.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="baile">Baile</a>
-                <a href="civil.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="civil">Civil</a>
-                <a href="sillon.html" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="sillon">Sillón</a>
-                <a href="selfiecam" class="nav-btn px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="espejo">espejo</a>
-                <a href="invitados.html" class="nav-btn nav-active  px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-rose-100" data-section="invitados">Fotos de Invitados</a>
-            </div>
     </div>
+
     <!-- Menú móvil desplegable -->
     <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-rose-100 px-4 pb-4">
         <a href="index.html" class="block nav-btn px-4 py-2 rounded-full font-medium mt-2 transition-all duration-300 hover:bg-rose-100" data-section="inicio">Inicio</a>
