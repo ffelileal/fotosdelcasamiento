@@ -1,31 +1,5 @@
-let currentSlide = 0;
-        const totalSlides = 3;
-        let currentPhotoData = null;
-
-        function showSection(sectionName) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.add('section-hidden');
-                section.classList.remove('fade-in');
-            });
-
-            // Show selected section
-            const targetSection = document.getElementById(sectionName);
-            targetSection.classList.remove('section-hidden');
-            setTimeout(() => {
-                targetSection.classList.add('fade-in');
-            }, 50);
-
-            // Update navigation
-            const navButtons = document.querySelectorAll('.nav-btn');
-            navButtons.forEach(btn => {
-                btn.classList.remove('nav-active');
-            });
-            
-            const activeBtn = document.querySelector(`[data-section="${sectionName}"]`);
-            activeBtn.classList.add('nav-active');
-        }
+     let currentSlide = 0;
+        const totalSlides = 6; // Cambia esto si agregas o quitas slides
 
         function nextSlide() {
             currentSlide = (currentSlide + 1) % totalSlides;
@@ -41,15 +15,16 @@ let currentSlide = 0;
             const track = document.getElementById('carouselTrack');
             const translateX = -currentSlide * 100;
             track.style.transform = `translateX(${translateX}%)`;
+            track.style.transition = 'transform 0.6s cubic-bezier(0.4,0,0.2,1)';
         }
 
         // Auto-advance carousel
         setInterval(nextSlide, 4000);
 
-        // Add position relative to carousel container
         document.addEventListener('DOMContentLoaded', function() {
             const carouselContainer = document.querySelector('.carousel-container');
             carouselContainer.style.position = 'relative';
+            updateCarousel(); // Asegura que el carrusel inicie bien
         });
 
         // Modal functions
@@ -190,17 +165,44 @@ let currentSlide = 0;
             }
         });
 
-        // Menú hamburguesa para móvil
+        // Modal para mostrar imagen real y descargarla
+        function openPhotoImg(imgUrl, title) {
+            const modal = document.getElementById('photoModal');
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+                <div class="flex flex-col items-center">
+                    <img src="${imgUrl}" alt="${title}" class="max-h-[70vh] rounded-xl shadow-xl mb-4"/>
+                    <p class="text-xl font-serif text-gray-200 mb-2">${title}</p>
+                </div>
+            `;
+            // Botón de descarga
+            const modalFooter = modalContent.parentElement.querySelector('.flex.justify-center');
+            if (modalFooter) {
+                modalFooter.innerHTML = `
+                    <a href="${imgUrl}" download class="gold-accent text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <span>Descargar</span>
+                    </a>
+                    <button onclick="closeModal()" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300">
+                        Cerrar
+                    </button>
+                `;
+            }
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
         document.addEventListener('DOMContentLoaded', function() {
-            const menuBtn = document.getElementById('menuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            menuBtn.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-            // Opcional: cerrar menú al hacer click en un enlace
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+    // Opcional: cerrar menú al hacer click en un enlace
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
         });
+    });
+});
